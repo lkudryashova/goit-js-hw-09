@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 9</title>
+    <title>2-form</title>
     <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <script src="./js/2-form.js" defer type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -20,9 +21,17 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul>
-      <li><a href="./1-gallery.html">1-gallery</a></li>
-      <li><a href="./2-form.html">2-form</a></li>
-    </ul>
+    <p><a href="./index.html">Go back</a></p>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
