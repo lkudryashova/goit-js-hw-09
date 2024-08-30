@@ -1,4 +1,4 @@
-const formData = {
+let formData = {
   email: '',
   message: '',
 };
@@ -12,6 +12,8 @@ const fillFormFields = () => {
   if (formDataFormLS === null) {
     return;
   }
+
+  formData = formDataFormLS;
 
   for (const key in formDataFormLS) {
     if (formDataFormLS.hasOwnProperty(key)) {
@@ -31,12 +33,16 @@ messageForm.addEventListener('input', onFormFieldInput);
 
 const onMessageFormSubmit = event => {
   event.preventDefault();
-  event.target.reset();
-  localStorage.removeItem('feedback-form-state');
   if (!formData.email || !formData.message) {
     alert('Please fill all fields');
   } else {
     console.log(formData);
+    event.target.reset();
+    localStorage.removeItem('feedback-form-state');
+    formData = {
+      email: '',
+      message: '',
+    };
   }
 };
 
